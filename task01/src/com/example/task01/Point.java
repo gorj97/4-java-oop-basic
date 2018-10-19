@@ -25,7 +25,7 @@ public class Point {
     }
 
     public String toString(){
-        return "(" + String.valueOf(this.x) + ", " + String.valueOf(this.y) + ")";
+        return "(" + this.x + ", " + this.y + ")";
     }
 
     public void print() {
