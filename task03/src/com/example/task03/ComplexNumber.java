@@ -1,14 +1,28 @@
 package com.example.task03;
 
 public class ComplexNumber {
-    int realPart;
-    int imaginaryPart;
+    private int realPart;
+    private int imaginaryPart;
 
-    ComplexNumber(){}
-
-    ComplexNumber(int tmpRealPart, int tmpImaginaryPart){
+    public ComplexNumber(int tmpRealPart, int tmpImaginaryPart){
         this.realPart = tmpRealPart;
         this.imaginaryPart = tmpImaginaryPart;
+    }
+
+    int getRealPart(){
+        return this.realPart;
+    }
+
+    int getImaginaryPart(){
+        return this.imaginaryPart;
+    }
+
+    void setRealPart(int realPart){
+        this.realPart = realPart;
+    }
+
+    void setImaginaryPart(int imaginaryPart){
+        this.imaginaryPart = imaginaryPart;
     }
 
     public ComplexNumber sum(ComplexNumber complexNumber){
@@ -16,7 +30,11 @@ public class ComplexNumber {
     }
 
     public ComplexNumber mult(ComplexNumber complexNumber){
-        return new ComplexNumber(this.realPart * complexNumber.realPart, this.imaginaryPart * complexNumber.imaginaryPart - 2 * this.imaginaryPart * complexNumber.imaginaryPart);
+        //a - realPart
+        //b - imaginaryPart
+        //(a1 + i * b1) * (a2 + i * b2) = (a1 * a2 - b1 * b2) + i(a1 * b2 + b1 * a2)
+
+        return new ComplexNumber(this.realPart * complexNumber.realPart - this.imaginaryPart * complexNumber.imaginaryPart, this.realPart * complexNumber.imaginaryPart + this.imaginaryPart * complexNumber.realPart);
     }
 
     public String toString(){
