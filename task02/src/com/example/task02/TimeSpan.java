@@ -3,49 +3,49 @@ package com.example.task02;
 public class TimeSpan {
     private int hours, minutes, seconds;
 
-    TimeSpan(int Hours, int Minutes, int Seconds){
+    public TimeSpan(int Hours, int Minutes, int Seconds) {
         this.seconds = Seconds;
         this.minutes = Minutes;
         this.hours = Hours;
     }
 
-    void setHours(int Hours){
+    public void setHours(int Hours) {
         this.hours = Hours;
     }
 
-    void setMinutes(int Minutes){
+    public void setMinutes(int Minutes) {
         this.minutes = Minutes;
     }
 
-    void setSeconds(int Seconds){
+    public void setSeconds(int Seconds) {
         this.seconds = Seconds;
     }
 
-     int getHours(){
+    public int getHours() {
         return this.hours;
     }
 
-    int getMinutes(){
+    public int getMinutes() {
         return this.minutes;
     }
 
-    int getSeconds(){
+    public int getSeconds() {
         return this.seconds;
     }
 
-    void add(TimeSpan time){
+    public void add(TimeSpan time) {
         this.hours += time.hours;
-        this.minutes +=time.minutes;
+        this.minutes += time.minutes;
         this.seconds += time.seconds;
     }
 
-    void subtract(TimeSpan time){
+    public void subtract(TimeSpan time) {
         this.hours -= time.hours;
         this.minutes -= time.minutes;
         this.seconds -= time.seconds;
     }
 
-    public String toString(){
-        return String.valueOf(this.hours) + " : " + String.valueOf(this.minutes) + " : " + String.valueOf(this.seconds);
+    public String toString() {
+        return this.hours + " : " + this.minutes + " : " + this.seconds;
     }
 }
