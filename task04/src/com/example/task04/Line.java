@@ -4,24 +4,24 @@ public class Line {
     private final Point p1;
     private final Point p2;
 
-    Line(Point tmpPoint1, Point tmpPoint2){
+    public Line(Point tmpPoint1, Point tmpPoint2) {
         this.p1 = tmpPoint1;
         this.p2 = tmpPoint2;
     }
 
-    public Point getP1(){
+    public Point getP1() {
         return this.p1;
     }
 
-    public Point getP2(){
+    public Point getP2() {
         return this.p2;
     }
 
-    public String toString(){
-        return "(" + String.valueOf(this.p1.toString()) + ", " + String.valueOf(this.p2.toString()) + ")";
+    public String toString() {
+        return "(" + this.p1.toString() + ", " + this.p2.toString() + ")";
     }
 
-    public boolean isCollinearLine(Point p){
+    public boolean isCollinearLine(Point p) {
         //ax + by + c - уравнение прямой
         int a = this.p1.y - this.p2.y;
         int b = this.p2.x - this.p1.x;
